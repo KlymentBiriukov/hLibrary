@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Erl-RJ-al7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tWU-5R-tlF">
+            <objects>
+                <navigationController id="Erl-RJ-al7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Afw-CF-yFU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EAk-8w-bCq" kind="relationship" relationship="rootViewController" id="2p1-nJ-UoO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hA3-O0-5lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-671" y="62"/>
+        </scene>
+        <!--Books ListVC-->
+        <scene sceneID="hzC-fv-7P5">
+            <objects>
+                <viewController id="EAk-8w-bCq" customClass="HLBooksListVC" customModule="hLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PIC-F9-kUf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QzG-77-xbm">
+                            <connections>
+                                <action selector="addNewBookAction:" destination="EAk-8w-bCq" id="Ra1-x3-4Qf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80c-SV-e3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="59"/>
+        </scene>
+    </scenes>
+</document>

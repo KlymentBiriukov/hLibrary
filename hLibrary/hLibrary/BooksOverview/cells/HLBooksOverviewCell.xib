@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HLBooksOverviewCell" id="KGk-i7-Jjw" customClass="HLBooksOverviewCell" customModule="hLibrary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piQ-zB-P57">
+                        <rect key="frame" x="10" y="10" width="300" height="24"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khf-nq-xzg">
+                        <rect key="frame" x="10" y="39" width="300" height="15.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="khf-nq-xzg" secondAttribute="bottom" constant="10" id="9sM-zN-UD6"/>
+                    <constraint firstItem="khf-nq-xzg" firstAttribute="top" secondItem="piQ-zB-P57" secondAttribute="bottom" constant="5" id="AjT-vT-NB8"/>
+                    <constraint firstAttribute="trailing" secondItem="piQ-zB-P57" secondAttribute="trailing" constant="10" id="EH8-da-vRg"/>
+                    <constraint firstItem="khf-nq-xzg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="PKY-kd-6CL"/>
+                    <constraint firstItem="piQ-zB-P57" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VmJ-EW-3Y9"/>
+                    <constraint firstAttribute="trailing" secondItem="khf-nq-xzg" secondAttribute="trailing" constant="10" id="o1t-Sp-6qn"/>
+                    <constraint firstItem="piQ-zB-P57" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tL9-NN-d6p"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="khf-nq-xzg" id="XR4-lH-YUG"/>
+                <outlet property="titleLabel" destination="piQ-zB-P57" id="PtJ-A2-lgU"/>
+            </connections>
+            <point key="canvasLocation" x="-71" y="-520.5"/>
+        </tableViewCell>
+    </objects>
+</document>
