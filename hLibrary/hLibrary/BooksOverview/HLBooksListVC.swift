@@ -30,7 +30,7 @@ class HLBooksListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Book")
+        let fetchRequest : NSFetchRequest<Book> = Book.fetchRequest()
         
         do {
             books = try managedContext.fetch(fetchRequest)
@@ -79,10 +79,10 @@ class HLBooksListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     func saveBook(title: String, author: String?){
         
         let entity = NSEntityDescription.entity(forEntityName: "Book", in: managedContext)!
-        let book = NSManagedObject(entity: entity, insertInto: managedContext)
+        let book = NSManagedObject(entity: entity, insertInto: managedContext) as! Book
         
-        book.setValue(title, forKey: "bookTitle")
-        book.setValue(author, forKey: "author")
+        book.bookTitle = title
+        book.author = author
         
         do {
             try managedContext.save()
@@ -100,11 +100,11 @@ class HLBooksListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let book = books[indexPath.row]
+        let book = books[indexPath.row] as! Book
         let cell = tableView.dequeueReusableCell(withIdentifier: "HLBooksOverviewCell",
                                                  for: indexPath) as! HLBooksOverviewCell
-        cell.titleLabel?.text = book.value(forKeyPath: "bookTitle") as? String
-        cell.authorLabel?.text = book.value(forKey: "author") as? String
+        cell.titleLabel?.text = book.bookTitle
+        cell.authorLabel?.text = book.author
         
         return cell
     }

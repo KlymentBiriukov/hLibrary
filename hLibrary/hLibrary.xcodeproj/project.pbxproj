@@ -18,6 +18,12 @@
 		227ADD8B20D9069100BC8FC9 /* HLBooksOverviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227ADD8920D9069100BC8FC9 /* HLBooksOverviewCell.xib */; };
 		22FAB6F520C97CBC00ADF813 /* HLBooksListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FAB6F320C97CBC00ADF813 /* HLBooksListVC.swift */; };
 		22FAB6F620C97CBC00ADF813 /* HLBooksListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FAB6F420C97CBC00ADF813 /* HLBooksListVC.xib */; };
+		62C3428620ECB11D0048C029 /* HLTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C3428420ECB11D0048C029 /* HLTextFieldCell.swift */; };
+		62C3428720ECB11D0048C029 /* HLTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C3428520ECB11D0048C029 /* HLTextFieldCell.xib */; };
+		62C3428A20ECB12E0048C029 /* HLAddBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C3428820ECB12D0048C029 /* HLAddBookVC.swift */; };
+		62C3428B20ECB12E0048C029 /* HLAddBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C3428920ECB12E0048C029 /* HLAddBookVC.xib */; };
+		62C3429420ECB4B30048C029 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C3429220ECB4B30048C029 /* Book+CoreDataClass.swift */; };
+		62C3429520ECB4B30048C029 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C3429320ECB4B30048C029 /* Book+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		227ADD8920D9069100BC8FC9 /* HLBooksOverviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLBooksOverviewCell.xib; sourceTree = "<group>"; };
 		22FAB6F320C97CBC00ADF813 /* HLBooksListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLBooksListVC.swift; sourceTree = "<group>"; };
 		22FAB6F420C97CBC00ADF813 /* HLBooksListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLBooksListVC.xib; sourceTree = "<group>"; };
+		62C3428420ECB11D0048C029 /* HLTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLTextFieldCell.swift; sourceTree = "<group>"; };
+		62C3428520ECB11D0048C029 /* HLTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLTextFieldCell.xib; sourceTree = "<group>"; };
+		62C3428820ECB12D0048C029 /* HLAddBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLAddBookVC.swift; sourceTree = "<group>"; };
+		62C3428920ECB12E0048C029 /* HLAddBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLAddBookVC.xib; sourceTree = "<group>"; };
+		62C3429220ECB4B30048C029 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
+		62C3429320ECB4B30048C029 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 		2279954820C977CA0068FC1A /* hLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				62C3428C20ECB4510048C029 /* Data */,
 				22FAB6F220C97C8F00ADF813 /* BooksOverview */,
 				2279955E20C978090068FC1A /* Managers */,
 				2279954920C977CA0068FC1A /* AppDelegate.swift */,
@@ -74,7 +87,6 @@
 				2279955320C977D10068FC1A /* Assets.xcassets */,
 				2279955520C977D10068FC1A /* LaunchScreen.storyboard */,
 				2279955820C977D10068FC1A /* Info.plist */,
-				2279955020C977CA0068FC1A /* hLibrary.xcdatamodeld */,
 			);
 			path = hLibrary;
 			sourceTree = "<group>";
@@ -92,6 +104,8 @@
 			children = (
 				227ADD8820D9069100BC8FC9 /* HLBooksOverviewCell.swift */,
 				227ADD8920D9069100BC8FC9 /* HLBooksOverviewCell.xib */,
+				62C3428420ECB11D0048C029 /* HLTextFieldCell.swift */,
+				62C3428520ECB11D0048C029 /* HLTextFieldCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -102,8 +116,28 @@
 				227ADD8720D9064F00BC8FC9 /* cells */,
 				22FAB6F320C97CBC00ADF813 /* HLBooksListVC.swift */,
 				22FAB6F420C97CBC00ADF813 /* HLBooksListVC.xib */,
+				62C3428820ECB12D0048C029 /* HLAddBookVC.swift */,
+				62C3428920ECB12E0048C029 /* HLAddBookVC.xib */,
 			);
 			path = BooksOverview;
+			sourceTree = "<group>";
+		};
+		62C3428C20ECB4510048C029 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				62C3428D20ECB45C0048C029 /* Entities */,
+				2279955020C977CA0068FC1A /* hLibrary.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		62C3428D20ECB45C0048C029 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				62C3429220ECB4B30048C029 /* Book+CoreDataClass.swift */,
+				62C3429320ECB4B30048C029 /* Book+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2279955720C977D10068FC1A /* LaunchScreen.storyboard in Resources */,
+				62C3428720ECB11D0048C029 /* HLTextFieldCell.xib in Resources */,
 				22FAB6F620C97CBC00ADF813 /* HLBooksListVC.xib in Resources */,
 				2279955420C977D10068FC1A /* Assets.xcassets in Resources */,
+				62C3428B20ECB12E0048C029 /* HLAddBookVC.xib in Resources */,
 				227ADD8B20D9069100BC8FC9 /* HLBooksOverviewCell.xib in Resources */,
 				2279954F20C977CA0068FC1A /* Main.storyboard in Resources */,
 			);
@@ -180,10 +216,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2279954C20C977CA0068FC1A /* ViewController.swift in Sources */,
+				62C3429420ECB4B30048C029 /* Book+CoreDataClass.swift in Sources */,
 				22FAB6F520C97CBC00ADF813 /* HLBooksListVC.swift in Sources */,
+				62C3428620ECB11D0048C029 /* HLTextFieldCell.swift in Sources */,
 				2279955220C977CA0068FC1A /* hLibrary.xcdatamodeld in Sources */,
 				227ADD8A20D9069100BC8FC9 /* HLBooksOverviewCell.swift in Sources */,
+				62C3428A20ECB12E0048C029 /* HLAddBookVC.swift in Sources */,
 				2279954A20C977CA0068FC1A /* AppDelegate.swift in Sources */,
+				62C3429520ECB4B30048C029 /* Book+CoreDataProperties.swift in Sources */,
 				2279956020C978470068FC1A /* HLDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
